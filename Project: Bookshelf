@@ -1,0 +1,98 @@
+var book = [
+{
+    title: "The Giver",
+    stars: 1,
+    author: "Mike",
+    color: color(184, 0, 0),
+    recommend: true,
+    row: 1
+},
+{
+    title: "The Taker",
+    stars: 2,
+    author: "Mary",
+    color: color(13, 184, 13),
+    recommend: false,
+    row: 1
+},
+{
+    title: "Charity",
+    stars: 2,
+    author: "Meg",
+    color: color(148, 49, 136),
+    recommend: false,
+    row: 1
+},
+{
+    title: "Frog town",
+    stars: 3,
+    author: "Mike",
+    color: color(184, 0, 0),
+    recommend: true,
+    row: 2
+},
+{
+    title: "FishMaster",
+    stars: 2,
+    author: "Mary",
+    color: color(13, 184, 13),
+    recommend: true,
+    row: 2
+},
+{
+    title: "The last..",
+    stars: 4,
+    author: "Meg",
+    color: color(148, 49, 136),
+    recommend: false,
+    row: 2
+},
+];
+
+// draw shelf
+fill(173, 117, 33);
+rect(0, 120, width, 10);
+fill(173, 117, 33);
+rect(0, 235, width, 10);
+
+for(var u = 0; u < book.length; u++){
+    if(book[u].row === 1){
+            // draw one book
+        fill(book[u].color);
+        rect(10 + 92 * u, 20, 90, 100);
+        fill(0, 0, 0);
+        textSize(14);
+        text(book[u].title, 15 + 90 * u, 29, 70, 100);
+        textSize(10);
+        text("by: " + book[u].author, 15 + 92 * u , 51, 70, 10);
+        if(book[u].recommend === true){
+          fill(255, 255, 255);
+          noStroke();
+          ellipse(74 + 90 * u, 90, 20, 20);
+          stroke(1);
+        }
+        for (var i = 0; i < book[u].stars; i++) {
+            image(getImage("cute/Star"), 20+ 90 * u + i * 15,          90, 20, 30);
+        }   
+    }
+    
+   else if (book[u].row === 2){
+                   // draw one book
+        fill(book[u].color);
+        rect(10 + 92 * u - 276, 134, 90, 100);
+        fill(0, 0, 0);
+        textSize(14);
+        text(book[u].title, 15 + 92 * u - 276, 140, 70, 100);
+        textSize(10);
+        text("by: " + book[u].author, 15 + 92 * u - 276, 165, 70, 10);
+        if(book[u].recommend === true){
+          fill(255, 255, 255);
+          noStroke();
+          ellipse(-190 + 90 * u, 198, 20, 20);
+          stroke(1);
+        }
+        for (var i = 0; i < book[u].stars; i++) {
+            image(getImage("cute/Star"), -250+ 90 * u + i * 15,          204 , 20, 30);
+        } 
+   }
+}
