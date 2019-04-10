@@ -1,0 +1,33 @@
+var ChangeB = -70;
+var ChangeG = -120;
+var ChangeR = 490;
+var ballSize = 152;
+
+
+fill(255, 148, 255);
+noStroke();
+ellipse(214, 28, 383, ballSize - 100);
+fill(255, 0, 0);
+textSize(30);
+text("STUFFED BALL!!!!!!!!", 80, 41);
+textSize(14);
+text("SO SOFT! IT WON'T ROLL OFF YOUR TABLE!", 10, 87);
+textSize(20);
+fill(23, 125, 99);
+text("WOW! IT'S SQUISHY!", 164, 182);
+
+fill(133, 133, 20);
+textSize(15);
+text("MORE THAN ONE COLOR!!!!!!!!!!!", 2, 362);
+    
+draw = function() {
+    ChangeB++;
+    ChangeG+= 0.5;
+    ChangeR--;
+    
+    fill(ChangeR, ChangeG, ChangeB);
+    ellipse(103, 237, ballSize, ballSize - 15);
+    
+    fill(ChangeB, ChangeR, ChangeG);
+    ellipse(275, 278, ballSize, ballSize - 15);
+};
