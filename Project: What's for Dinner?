@@ -1,0 +1,37 @@
+background(20, 99, 184); // wooden table
+ellipse(200, 200, 350, 350); // plate
+ellipse(200, 200, 300, 300); 
+
+strokeWeight(10);//pizza crust
+stroke(199, 122, 40);
+fill(235, 199, 89);
+ellipse(200, 200, 250, 250);
+
+strokeWeight(4);//red toppings
+stroke(148, 13, 13);
+fill(255, 0, 0);
+ellipse(223, 294, 40, 40); 
+ellipse(171, 268, 40, 40);
+ellipse(223, 147, 40, 40); 
+ellipse(268, 265, 40, 40); 
+ellipse(268, 204, 40, 40);
+ellipse(122, 244, 35, 35); 
+ellipse(146, 207, 30, 30);
+ellipse(271, 145, 30, 30); 
+ellipse(160, 114, 30, 30); 
+ellipse(146, 158, 35, 35);
+ellipse(177, 176, 25, 25); 
+
+fill(0, 255, 0);
+strokeWeight(2);
+stroke(35, 84, 6);
+triangle(224, 198, 239, 196, 223, 215);
+triangle(296, 198, 315, 199, 303, 215);
+
+strokeWeight(1);//slices
+stroke(148, 93, 12);
+line(202, 79, 196, 204);
+line(312, 153, 196, 204);
+line(86, 160, 196, 204);
+line(114, 284, 196, 204);
+line(262, 302, 196, 204);
