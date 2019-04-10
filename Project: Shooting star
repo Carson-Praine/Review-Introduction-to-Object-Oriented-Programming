@@ -1,0 +1,21 @@
+var xPos = 403;
+var yPos = -2;
+var xstar = -1;
+var ystar = -2;
+
+draw = function() {
+    yPos++;
+    xPos--;
+    ystar++;
+    xstar++;
+    
+    noStroke();
+    background(29, 40, 115);//background
+    
+    
+    
+    fill(255, 242, 0);//stars
+    ellipse(xPos, yPos, 10, 10);
+    fill(189, 23, 45);
+    ellipse(xstar, ystar, 10, 10);
+};
