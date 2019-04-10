@@ -1,0 +1,24 @@
+var bodyX = 200;
+var bodyY = 220;
+var bodyW = 161;
+var headW = bodyW/2;
+var eyeSize = 2;
+var headY = bodyY-70;
+
+draw = function() {
+    eyeSize += 0.2;
+    background(207, 254, 255);
+    fill(240, 209, 36);
+    ellipse(bodyX - (bodyX/11), bodyY-90, headW/4, 90); // Left Ear?
+    ellipse(bodyX + (bodyX/11), bodyY-90, headW/4, 90); // Right Ear?
+    ellipse(bodyX, bodyY, bodyW, 106); // body?
+    fill(212, 208, 186);
+    ellipse(bodyX, bodyY + 5, bodyW/1.5, 90); // belly?
+    fill(217, 184, 17);
+    ellipse(bodyX, bodyY-70, headW, 47); // face?
+    
+    
+    fill(255, 0, 0);
+    ellipse(bodyX - bodyW/10, headY, eyeSize, eyeSize); //Left Eye?
+    ellipse(bodyX + bodyW/10, headY, eyeSize, eyeSize); //Right Eye?
+};
