@@ -1,0 +1,32 @@
+fill(0, 0, 0);
+ellipse(200, 200, 375, 375);
+fill(60, 0, 255);
+triangle(200, 104, 280, 280, 120, 280);
+fill(255, 255, 255);
+var answer = floor(random(1, 5));
+if (answer === 1) {
+    //intentional
+    text("NOT YET", 176, 200);
+    text("IMPLEMENTED", 159, 229); 
+}
+else if (answer === 2) {
+    textSize(18);
+    fill(79, 255, 15);
+    text("NO", 188, 205);
+    text("NOT RIGHT", 153, 253); 
+}
+else if (answer === 3) {
+    fill(255, 0, 0);
+    textSize(16);
+    text("MAYBE", 172, 205);
+    text("WITH LUCK", 155, 240); 
+}
+else if (answer === 4) {
+    textSize(16);
+    text("ANOTHER", 162, 215);
+    text("TIME", 177, 252); 
+}
+else{
+    text("Error", 176, 200);
+    text("Error", 159, 229); 
+}
